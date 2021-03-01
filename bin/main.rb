@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
+require 'date'
+require_relative '../lib/reader.rb'
 
-puts 'Hello'
-condition = true
-if condition
+date = Date.today
+puts "Reading file... #{date}"
+file = File.new(ARGV.first)
+file.spread_file
+file.check_trailing_spaces
+file.errors_array
+if file.errors_array.length == 0
   puts 'No offenses detected'
 else
-  puts 'offenses detected'
-  puts '*listing all the offenses*'
+  puts file.errors_array
 end
