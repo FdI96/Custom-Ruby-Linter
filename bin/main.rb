@@ -11,6 +11,7 @@ file.check_trailing_spaces
 file.check_wrong_identation
 file.check_line_length
 file.check_last_empty_line
+file.check_empty_lines
 if file.errors_array.length.zero?
   puts 'No offenses detected'
 else

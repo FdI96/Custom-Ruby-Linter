@@ -36,10 +36,14 @@ module CheckErrors
     @file_lines.last != @file_lines.last.strip.empty? ? @errors_array << "line:#{@file_lines_total + 1}:0 #{msg}" : n
   end
 
-  def check_empty_line
-    a = %w[def class module end]
-    @file_line.each_with_index do |elem, i|
-      
+  def check_empty_lines
+    a = %w[def class module]
+    n = false
+    msg = '=> Error - Inadequate empty line'
+    @file_lines.each_with_index do |line, i|
+      if a.include?(line.strip.split(' ').first)
+        @file_lines[i + 1].strip.empty? ? @errors_array << "line:#{i + 2}:0 #{msg}" : n
+      end
     end
   end
 end

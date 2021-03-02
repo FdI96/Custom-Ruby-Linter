@@ -1,4 +1,5 @@
 class Test
+
   def initialize
     fake_var = "it's fake"
   end
