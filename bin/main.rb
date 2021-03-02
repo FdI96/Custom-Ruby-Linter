@@ -10,7 +10,8 @@ file.spread_file
 file.check_trailing_spaces
 file.check_wrong_identation
 file.check_line_length
-if file.errors_array.length == 0
+file.check_last_empty_line
+if file.errors_array.length.zero?
   puts 'No offenses detected'
 else
   puts file.errors_array

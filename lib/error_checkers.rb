@@ -1,5 +1,3 @@
-require 'strscan'
-
 module CheckErrors
   def check_trailing_spaces
     a = false
@@ -10,15 +8,17 @@ module CheckErrors
 
   def check_wrong_identation
     reserved = %w[module class def do if unless else]
+    msg = '=> Error - Wrong Identation'
     a = false
     identation_level = 0
     current_identation = 0
     @file_lines.each_with_index do |line, i|
       next if line.include?('puts') || line.strip.empty?
+
       current_identation = line.index(/\w/)
       identation_level -= 1 if line.include?('end')
-      current_identation != identation_level * 2 ? @errors_array << "line:#{i + 1}:#{current_identation} => Error - Wrong Identation" : a
-      identation_level += 1 if reserved.include?((line.strip.split(' ')).first)
+      current_identation != identation_level * 2 ? @errors_array << "line:#{i + 1}:#{current_identation} #{msg} " : a
+      identation_level += 1 if reserved.include?(line.strip.split(' ').first)
     end
   end
 
@@ -27,6 +27,19 @@ module CheckErrors
     a = false
     @file_lines.each_with_index do |line, i|
       line.length > 120 ? @errors_array << "line:#{i + 1}:120 => Error - #{msg}" : a
+    end
+  end
+
+  def check_last_empty_line
+    n = false
+    msg = '=> Error - Final newline missing'
+    @file_lines.last != @file_lines.last.strip.empty? ? @errors_array << "line:#{@file_lines_total + 1}:0 #{msg}" : n
+  end
+
+  def check_empty_line
+    a = %w[def class module end]
+    @file_line.each_with_index do |elem, i|
+      
     end
   end
 end
