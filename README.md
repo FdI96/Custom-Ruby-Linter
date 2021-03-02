@@ -30,13 +30,25 @@ Please install ruby, you may follow this guide from Odin Project webpage [here](
     -Open your console
     -In there, copy and paste this command: "git clone https://github.com/FdI96/Custom-Ruby-Linter"
 
+For more information about use the git clone, visit this [LINK](https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/#:~:text=From%20your%20repository%20page%20on,like%20to%20clone%20your%20repository.)
+
 # Documentation
 
-## Trailing White Spaces
+## Information
+
+In this section I represent the good and bad practices for each offense to fix all the custom linters error.
+
+### Trailing White Space Detected
+
+### Wrong Identation
+
+### Reduce characters per line max 120
+
+### Final newline missing
+
+### Inadequate empty line
 
 ![GoodNBadPractices]()
-
-For more information about use the git clone, visit this [LINK](https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/#:~:text=From%20your%20repository%20page%20on,like%20to%20clone%20your%20repository.)
 
 ## AUTHOR
 
