@@ -40,11 +40,23 @@ In this section I represent the good and bad practices for each offense to fix a
 
 ### Trailing White Space Detected
 
+![GoodNBadPractices]()
+
 ### Wrong Identation
+
+![GoodNBadPractices]()
 
 ### Reduce characters per line max 120
 
+![GoodNBadPractices]()
+
 ### Final newline missing
+
+-Bad practice
+![GoodNBadPractices]()
+
+-Good practice
+![GoodNBadPractices]()
 
 ### Inadequate empty line
 
