@@ -54,11 +54,11 @@ In this section I represent the good and bad practices for each offense to fix a
 
     Bad practice
 
-![GoodNBadPractices]()
+    ![GoodNBadPractices]()
 
     Good practice
 
-![GoodNBadPractices]()
+    ![GoodNBadPractices]()
 
 ### Inadequate empty line
 
