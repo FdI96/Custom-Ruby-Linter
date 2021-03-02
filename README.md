@@ -54,11 +54,11 @@ In this section I represent the good and bad practices for each offense to fix a
 
     Bad practice
 
-    ![GoodNBadPractices](./images/noline.jpeg)
+![GoodNBadPractices](./images/noline.jpeg)
 
     Good practice
 
-    ![GoodNBadPractices](./images/line.jpeg)
+![GoodNBadPractices](./images/line.jpeg)
 
 ### Inadequate empty line
 
