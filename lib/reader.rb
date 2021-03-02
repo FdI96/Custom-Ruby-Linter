@@ -1,8 +1,7 @@
-require_relative './error-checkers.rb'
+require_relative './error_checkers.rb'
 
 class File
   attr_reader :path, :file_lines, :file_lines_total, :errors_array
-  @@reserved = %w[module class def do if end]
   def initialize(path)
     @path = path
     @file_lines = []
