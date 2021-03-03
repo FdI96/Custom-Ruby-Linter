@@ -1,6 +1,7 @@
 require_relative './error_checkers.rb'
 
 class File
+  include CheckErrors
   attr_reader :path, :file_lines, :file_lines_total, :errors_array
   def initialize(path)
     @path = path
@@ -13,6 +14,4 @@ class File
     @file_lines = File.readlines(@path)
     @file_lines_total = file_lines.length
   end
-
-  include CheckErrors
 end

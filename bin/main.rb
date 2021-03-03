@@ -3,9 +3,10 @@ require 'date'
 require_relative '../lib/reader.rb'
 
 date = Date.today
-
 file = File.new(ARGV.first)
 puts "Reading file: #{file.path}... #{date}"
+return puts 'No files detected to analyze.' if file.path.nil?
+
 file.spread_file
 file.check_trailing_spaces
 file.check_wrong_identation

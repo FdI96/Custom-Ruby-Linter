@@ -1,6 +1,6 @@
 class Test
-  def initialize(fake_var)
-    @fake_var = fake_var
+  def initialize
+    fake_var = fake_var
   end
 
   def fake_method
