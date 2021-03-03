@@ -3,6 +3,8 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "./Gemfile"
+    - "./test.rb"
+    - "./empty_file.rb"
 
   DisplayCopNames: true
 
