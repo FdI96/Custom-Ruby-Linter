@@ -4,7 +4,6 @@ require_relative '../test.rb'
 
 describe File do
   let(:file_correct) { File.new('test.rb') }
-  let(:file_incorrect) { File.new('test_two.rb') }
 
   describe '#spread_file' do
     it 'Convert a file in an array and store the amount of lines of it.' do
@@ -39,16 +38,6 @@ describe File do
 
     it 'Check the length of the line' do
       expect(file_correct.check_line_length).not_to eql(false)
-    end
-  end
-
-  describe '#check_last_empty_line' do
-    it 'Check if the last line is empty' do
-      expect(file_correct.check_last_empty_line).to eql([])
-    end
-
-    it 'Check if the last line is empty' do
-      expect(file_correct.check_last_empty_line).not_to eql(true)
     end
   end
 
