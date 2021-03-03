@@ -1,7 +1,6 @@
 require_relative '../lib/reader.rb'
 require_relative '../lib/error_checkers.rb'
 require_relative '../test.rb'
-require_relative '../test_two.rb'
 
 describe File do
   let(:file_correct) { File.new('test.rb') }
