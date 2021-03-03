@@ -20,7 +20,7 @@ describe File do
 
     it 'Check the trailing spaces at the end of a line.' do
       expect(file_correct.check_trailing_spaces).not_to eql(3)
-    end 
+    end
   end
 
   describe '#check_wrong_identation' do
